@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 3090;
 
 //DB setup
-mongoose.connect("mongodb://localhost/auth", {
+mongoose.connect("mongodb://localhost:27017/auth", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
