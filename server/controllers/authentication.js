@@ -22,7 +22,7 @@ exports.signup = function(req, res, next) {
       if (err) {
         return next(err);
       }
-      res.json(user);
+      res.json({ success: true });
     });
   });
 };
