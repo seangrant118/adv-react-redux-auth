@@ -11,8 +11,18 @@ const localLogin = new LocalStrategy({ usernameField: "email" }, function(
   password,
   done
 ) {
-  // verify this username and password, call done with the user if correct
+  // verify this email and password, call done with the user if correct
   // otherwise call done with false
+  User.findOne({ email: email }, function(err, user) {
+    if (err) {
+      return done(err);
+    }
+    if (!user) {
+      return done(null, false);
+    }
+
+    //compare passwords
+  });
 });
 
 // setup options for jwt strategy
