@@ -1,5 +1,11 @@
 import React from "react";
+import Header from "./Header";
 
 export default () => {
-  return <div>Hi, I am the app</div>;
+  return (
+    <div>
+      <Header />
+      <div>Hi, I am the app</div>
+    </div>
+  );
 };
